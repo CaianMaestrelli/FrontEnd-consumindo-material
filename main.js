@@ -1,21 +1,22 @@
-const quoteText = document.querySelector('.quote');
-const authorText = document.querySelector('.autor');
-const errorMessage = document.querySelector('.error');
-const btn = document.querySelector('.get-quote');
+const cep = document.createElement('input');
+cep.setAttribute('type', 'text');
+cep.setAttribute('class', 'cep');
+document.body.appendChild(cep);
 
-const API_URL = 'http://dummyjson.com/quotes/random';
+const btn = document.createElement('button');
+btn.setAttribute('class', 'btn');
+btn.innerHTML = 'Click me';
+document.body.appendChild(btn);
 
 btn.addEventListener('click', async () => {
-	try{
-		const response = await fetch(API_URL);
-		const data = await response.json();
-		quoteText.innerText = data.quote;
-		authorText.innerText = data.author;
-		errorMessage.innerText = '';
-	} catch (error) {
-		quoteText.innerText = '';
-		authorText.innerText = '';
-		errorMessage.innerText = `Error getting quote: ${error.messega}`;
-	}
-
+	const response = await fetch(`viacep.com.br/ws/${cep}/json/`);
 });
+// const btnSearch = document.('button');
+// const cep = document.querySelector('.input-search');
+
+// btn.addEventListener('click', await () => {
+
+// 	const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+// 	const data = await response.json();
+// 	console.log(data);
+// });
