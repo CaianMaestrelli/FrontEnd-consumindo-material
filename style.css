@@ -1,0 +1,11 @@
+.get-quote {
+    width: 130px;
+    height: 35px;
+    border-radius: 10px;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+}
