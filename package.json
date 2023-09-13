@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "vite --open"
+    "dev": "vite --open",
+    "lint": "npx eslint .src",
+    "test": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNIG=1 jest --watchAll "
   },
   "author": "",
   "license": "ISC",
